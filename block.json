@@ -1,15 +1,48 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/boilerplate",
-	"title": "Boilerplate",
-	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"name": "blocks-course/team-members",
+	"title": "Team Members",
+	"category": "media",
+	"icon": "groups",
+	"description": "A team members grid",
+	"keywords": ["Team", "Members", "Grid"],
 	"supports": {
-		"html": false
+		"html": false,
+		"align": ["wide"]
 	},
-	"textdomain": "boilerplate",
+	"textdomain": "team-members",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
-	"style": "file:./build/style-index.css"
+	"style": "file:./build/style-index.css",
+	"attributes":	{
+		"columns": {
+			"type": "number",
+			"default": 2
+		}
+	},
+	"example": {
+		"attributes": {
+			"columns": 2
+		},
+		"innerBlocks": [
+			{
+				"name": "blocks-course/team-member",
+				"attributes": {
+					"name": "John Doe",
+					"bio": "quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada",
+					"url": "https://picsum.photos/id/1012/300/200",
+					"socialLinks": [{"icon": "facebook"}, {"icon": "instagram"}, {"icon": "youtube"}]
+				}
+			},
+			{
+				"name": "blocks-course/team-member",
+				"attributes": {
+					"name": "Jane Doe",
+					"bio": "quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada",
+					"url": "https://picsum.photos/id/1011/300/200",
+					"socialLinks": [{"icon": "facebook"}, {"icon": "instagram"}, {"icon": "youtube"}]
+				}
+			}
+		]
+	}
 }
